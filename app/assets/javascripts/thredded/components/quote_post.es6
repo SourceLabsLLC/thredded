@@ -13,7 +13,7 @@
     // Handle only left clicks with no modifier keys
     if (evt.button !== 0 || evt.ctrlKey || evt.altKey || evt.metaKey || evt.shiftKey) return;
     evt.preventDefault();
-    const target = document.getElementById('post_content');
+    const target = $('trix-editor#post_content')[0];
     target.scrollIntoView();
     target.value = '...';
     fetchReply(evt.target.getAttribute('data-thredded-quote-post'), (replyText) => {

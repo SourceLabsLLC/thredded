@@ -10,7 +10,7 @@
   const autosize = window.autosize;
 
   const COMPONENT_SELECTOR = '[data-thredded-post-form]';
-  const CONTENT_TEXTAREA_SELECTOR = 'textarea[name$="[content]"]';
+  const CONTENT_TEXTAREA_SELECTOR = '[name$="[content]"]';
 
   const initPostForm = (form) => {
     const textarea = form.querySelector(CONTENT_TEXTAREA_SELECTOR);
