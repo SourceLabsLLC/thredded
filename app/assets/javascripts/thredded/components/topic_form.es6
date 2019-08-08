@@ -11,18 +11,18 @@
 
   const COMPONENT_SELECTOR = '[data-thredded-topic-form]';
   const TITLE_SELECTOR = '[name$="topic[title]"]';
-  const CONTENT_TEXTAREA_SELECTOR = 'textarea[name$="[content]"]';
+  const CONTENT_TEXTAREA_SELECTOR = '[name$="[content]"]';
   const COMPACT_CLASS = 'thredded--is-compact';
   const EXPANDED_CLASS = 'thredded--is-expanded';
   const ESCAPE_KEY_CODE = 27;
 
   const initTopicForm = (form) => {
-    const textarea = form.querySelector(CONTENT_TEXTAREA_SELECTOR);
+    const textarea = form.querySelectorAll(CONTENT_TEXTAREA_SELECTOR)[1];
     if (!textarea) {
       return;
     }
     autosize(textarea);
-    new ThreddedPreviewArea(form, textarea);
+    // new ThreddedPreviewArea(form, textarea);
     ThreddedMentionAutocompletion.init(form, textarea);
 
     if (!form.classList.contains(COMPACT_CLASS)) {

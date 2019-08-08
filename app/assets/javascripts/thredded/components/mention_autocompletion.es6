@@ -6,7 +6,7 @@ const ThreddedMentionAutocompletion = {
   DROPDOWN_MAX_COUNT: 6,
 
   init(form, textarea) {
-    const editor = new Textcomplete.editors.Textarea(textarea);
+    const editor = new Textcomplete.editors.ContentEditable(textarea);
     const textcomplete = new Textcomplete(editor, {
       dropdown: {
         className: Thredded.UserTextcomplete.DROPDOWN_CLASS_NAME,

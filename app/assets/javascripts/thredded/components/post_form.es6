@@ -13,9 +13,9 @@
   const CONTENT_TEXTAREA_SELECTOR = '[name$="[content]"]';
 
   const initPostForm = (form) => {
-    const textarea = form.querySelector(CONTENT_TEXTAREA_SELECTOR);
+    const textarea = form.querySelectorAll(CONTENT_TEXTAREA_SELECTOR)[1];
     autosize(textarea);
-    new ThreddedPreviewArea(form, textarea);
+    // new ThreddedPreviewArea(form, textarea);
     ThreddedMentionAutocompletion.init(form, textarea);
   };
 
